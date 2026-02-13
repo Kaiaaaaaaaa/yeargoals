@@ -1,22 +1,32 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #1b0b47;
+    background-color: #080314;
     margin: 0;
     padding: 20px;
 }
 
 h1 {
-    color: #333;
+    color: #ffffff;
+    font-size: xx-large;
 }
 
 h2 {
-    color: #d40808;
+    color: #0ac7f7;
+    font-size: large;
+}
+
+goalText {
+    color: darkorchid;
+    font-style: italic;
+    font-weight: bolder;
 }
 
 synth {
-    display: block;
-    margin: 20px auto;
+    bottom: 5%;
+    align-content: center;
+    position: fixed;
     width: 100%;
-    max-width: 600px;
+    /* height: 0%; */
+    color: azure;
 }
