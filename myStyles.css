@@ -1,0 +1,22 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1b0b47;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    color: #333;
+}
+
+h2 {
+    color: #d40808;
+}
+
+synth {
+    display: block;
+    margin: 20px auto;
+    width: 100%;
+    max-width: 600px;
+}
