@@ -56,8 +56,10 @@ goalText {
 synth {
     display: flex;
     justify-content: center;
+    text-align: center;
     bottom: 5%;
     position: fixed;
     width: 100%;
     color: azure;
+    font-style: italic;
 }
