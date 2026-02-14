@@ -47,8 +47,9 @@ h2 {
 
 h3 {
     color: rgb(175, 171, 206);
-    font-size: medium;
+    font-size: small;
     text-align: center;
+    line-height: 1.2rem;
     margin-bottom: 30px;
 }
 

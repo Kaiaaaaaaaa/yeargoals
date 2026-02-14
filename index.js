@@ -10,7 +10,19 @@ document.getElementById("goal2").innerHTML = goal2 ? "☑︎ Aaaaw yeah!!" : "�
 document.getElementById("goal3").innerHTML = goal3 ? "☑︎ Let's goooo!" : "☐ Are you trying?";
 
 
-window.addEventListener("click", function() 
+window.addEventListener("click", function(e) 
+{
+    if (e.ctrlKey) {
+        for (let i = 0; i < 50; i++) {
+            newStarStuff();
+        }
+    }
+    else {
+        newStarStuff();
+    }
+});
+
+function newStarStuff() 
 {
     const newStar = document.createElement("div");
     newStar.classList.add("star");
@@ -19,17 +31,33 @@ window.addEventListener("click", function()
     document.getElementById("mySky").appendChild(newStar);
     starCount++;
     updateStarCounter();
-});
+}
 
-window.addEventListener("contextmenu", function(e) 
+function removeStarStuff()
 {
-    e.preventDefault();
     const stars = document.querySelectorAll(".star");
     if (stars.length > 0) {
         document.getElementById("mySky").removeChild(stars[stars.length - 1]);
     }
     starCount --;
     updateStarCounter();
+}
+
+
+window.addEventListener("contextmenu", function(e) 
+{
+    e.preventDefault();
+    if (e.ctrlKey) 
+    {
+        for (let i = 0; i < 50; i++) 
+        {
+            removeStarStuff();
+        }
+    }
+    else 
+    {
+        removeStarStuff();
+    }
 });
 
 function updateStarCounter() {
