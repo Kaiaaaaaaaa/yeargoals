@@ -23,7 +23,7 @@ h1 {
     font-size: xx-large;
     display: flex;
     justify-content: center;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 }
 
 .goalsContainer {
@@ -43,6 +43,13 @@ h2 {
     margin: 8px;
     /* display: flex; */
     /* justify-content: center; */
+}
+
+h3 {
+    color: rgb(175, 171, 206);
+    font-size: medium;
+    text-align: center;
+    margin-bottom: 30px;
 }
 
 goalText {
