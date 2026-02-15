@@ -71,4 +71,5 @@ window.addEventListener("contextmenu", function(e)
 
 function updateStarCounter() {
     document.getElementById("starCount").innerHTML = starCount;
+    document.getElementById("starCount").style.fontSize = (20 + starCount) + "px";
 }

@@ -15,7 +15,7 @@ backgroundGradient {
     width: 100%;
     height: 100%;
     overflow: hidden;
-    z-index: -1;
+    z-index: -2;
 }
 
 h1 {
@@ -24,6 +24,23 @@ h1 {
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
+}
+
+.countWrapper {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+countText {
+    color: rgb(175, 171, 206);
+    font-size: small;
+    text-align: center;
+    line-height: 1;
+    margin: 2px 0;
+    z-index: -1;
 }
 
 .goalsContainer {
@@ -50,8 +67,9 @@ h3 {
     font-size: small;
     text-align: center;
     line-height: 1.2rem;
-    margin-bottom: 30px;
+    margin-bottom: 0px;
 }
+
 
 goalText {
     color: darkorchid;
