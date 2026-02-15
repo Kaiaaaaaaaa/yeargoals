@@ -3,6 +3,7 @@ let completeGoalCount = 0;
 let goalCountNum = 0;
 let starCount = 7;
 
+let starSpawnSpeed = 20;
 
 let goal1 = false;
 let goal2 = false;
@@ -33,12 +34,16 @@ document.getElementById("goal5").innerHTML = goal5 ? "☑︎ That's awesome!" : 
 window.addEventListener("click", handleClick);
 
 function handleClick(e) {
-    if (!e.ctrlKey) {
-        newStarStuff();
+    if (e.ctrlKey)     {
+        spawnStars(50, starSpawnSpeed);
         return;
     }
-
-    spawnStars(50, 50);
+    if (e.shiftKey) {
+        spawnStars(1000, starSpawnSpeed);
+        return;
+    }
+    else
+        newStarStuff();
 }
 
 function spawnStars(amount, delay) {
@@ -84,21 +89,33 @@ function countStarsAndUpdateCounter() {
 }
 
 
-window.addEventListener("contextmenu", function(e) 
-{
+window.addEventListener("contextmenu", handleRightClick);
+
+function handleRightClick(e) {
     e.preventDefault();
-    if (e.ctrlKey) 
-    {
-        for (let i = 0; i < 50; i++) 
-        {
-            removeStarStuff();
-        }
+
+    if (e.ctrlKey)     {
+        burst(removeStarStuff, 50, starSpawnSpeed);
+        return;
     }
-    else 
-    {
+    if (e.shiftKey) {
+        burst(removeStarStuff, 1000, starSpawnSpeed);
+        return;
+    }
+    else
         removeStarStuff();
-    }
-});
+}
+
+
+function burst(action, amount, delay) {
+    let count = 0;
+
+    const id = setInterval(() => {
+        action();
+        if (++count >= amount) clearInterval(id);
+    }, delay);
+}
+
 
 // function updateStarCounter() {
 //     document.getElementById("starCount").innerHTML = starCount;
