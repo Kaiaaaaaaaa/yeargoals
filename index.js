@@ -30,17 +30,29 @@ document.getElementById("goal4").innerHTML = goal4 ? "☑︎ You're a star!" : "
 document.getElementById("goal5").innerHTML = goal5 ? "☑︎ That's awesome!" : "☐ You should do it!";
 
 
-window.addEventListener("click", function(e) 
-{
-    if (e.ctrlKey) {
-        for (let i = 0; i < 50; i++) {
-            newStarStuff();
-        }
-    }
-    else {
+window.addEventListener("click", handleClick);
+
+function handleClick(e) {
+    if (!e.ctrlKey) {
         newStarStuff();
+        return;
     }
-});
+
+    spawnStars(50, 50);
+}
+
+function spawnStars(amount, delay) {
+    let count = 0;
+
+    const interval = setInterval(() => {
+        newStarStuff();
+
+        if (++count >= amount) {
+            clearInterval(interval);
+        }
+
+    }, delay);
+}
 
 function newStarStuff() 
 {
