@@ -30,8 +30,9 @@ function newStarStuff()
     newStar.style.left = Math.random() * window.innerWidth*2 + "px";
     newStar.style.top = Math.random() * window.innerHeight*2 + "px";
     document.getElementById("mySky").appendChild(newStar);
-    starCount++;
-    updateStarCounter();
+    countStarsAndUpdateCounter()
+    // starCount++;
+    // updateStarCounter();
 }
 
 function removeStarStuff()
@@ -40,7 +41,14 @@ function removeStarStuff()
     if (stars.length > 0) {
         document.getElementById("mySky").removeChild(stars[stars.length - 1]);
     }
-    starCount --;
+    countStarsAndUpdateCounter()
+    // starCount --;
+    // updateStarCounter();
+}
+
+function countStarsAndUpdateCounter() {
+    const stars = document.querySelectorAll(".star");
+    starCount = stars.length;
     updateStarCounter();
 }
 
