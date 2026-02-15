@@ -69,7 +69,26 @@ window.addEventListener("contextmenu", function(e)
     }
 });
 
+// function updateStarCounter() {
+//     document.getElementById("starCount").innerHTML = starCount;
+//     document.getElementById("starCount").style.fontSize = (20 + (starCount/2)) + "px";
+// }
+
 function updateStarCounter() {
-    document.getElementById("starCount").innerHTML = starCount;
-    document.getElementById("starCount").style.fontSize = (20 + (starCount/2)) + "px";
+    const el = document.getElementById("starCount");
+    el.innerHTML = starCount;
+
+    const baseSize = 20;
+    let maxScale = window.innerWidth / 50;
+    const k = 0.0015;
+
+    // #### Asymptotic growth ####
+    // A = max scale
+    // k = growth rate
+    // x = star count
+    // e = Euler's number
+    // f(x) = 1 + (A - 1) * (1 - e^(-k * x))
+
+    const scale = 1 + (maxScale - 1) * (1 - Math.exp(-k * starCount));
+    el.style.fontSize = (baseSize * scale) + "px";
 }
