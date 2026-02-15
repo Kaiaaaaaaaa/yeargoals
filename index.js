@@ -30,6 +30,7 @@ document.getElementById("goal3").innerHTML = goal3 ? "☑︎ Let's goooo!" : "�
 document.getElementById("goal4").innerHTML = goal4 ? "☑︎ You're a star!" : "☐ Keep trying!";
 document.getElementById("goal5").innerHTML = goal5 ? "☑︎ That's awesome!" : "☐ You should do it!";
 
+spawnStars(10, 300);
 
 window.addEventListener("click", handleClick);
 
