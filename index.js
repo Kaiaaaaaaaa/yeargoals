@@ -1,17 +1,34 @@
 
+let completeGoalCount = 0;
+let goalCountNum = 0;
+let starCount = 7;
+
+
 let goal1 = false;
 let goal2 = false;
 let goal3 = false;
 let goal4 = false;
 let goal5 = true;
 
-let starCount = 7;
+goalCount(goal1);
+goalCount(goal2);
+goalCount(goal3);
+goalCount(goal4);
+goalCount(goal5);
+
+function goalCount(goal) {
+    goalCountNum++;
+    if (goal) completeGoalCount++;
+        document.getElementById("goalsCompleted").innerHTML = completeGoalCount;
+        document.getElementById("goalCount").innerHTML = goalCountNum;
+}
 
 document.getElementById("goal1").innerHTML = goal1 ? "☑︎ Hell yeah!" : "☐ Total failure!";
 document.getElementById("goal2").innerHTML = goal2 ? "☑︎ Aaaaw yeah!!" : "☐ Come on bruh...";
 document.getElementById("goal3").innerHTML = goal3 ? "☑︎ Let's goooo!" : "☐ Are you trying?";
 document.getElementById("goal4").innerHTML = goal4 ? "☑︎ You're a star!" : "☐ Keep trying!";
 document.getElementById("goal5").innerHTML = goal5 ? "☑︎ That's awesome!" : "☐ You should do it!";
+
 
 window.addEventListener("click", function(e) 
 {

@@ -61,6 +61,13 @@ countText {
     gap: 10px;
 }
 
+.goalCountContainer {
+    margin-top: 80px;
+    text-align: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
 h2 {
     color: #0ac7f7;
     font-size: large;
@@ -80,6 +87,14 @@ goalText {
     color: darkorchid;
     /* font-style: italic; */
     font-weight: bolder;
+    margin-left: 10px;
+}
+
+goalTextLarge {
+    color: darkorchid;
+    /* font-style: italic; */
+    font-weight: bolder;
+    font-size: 30px;
     margin-left: 10px;
 }
 
