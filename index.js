@@ -3,6 +3,7 @@ let goal1 = false;
 let goal2 = false;
 let goal3 = false;
 let goal4 = false;
+let goal5 = true;
 
 let starCount = 7;
 
@@ -10,6 +11,7 @@ document.getElementById("goal1").innerHTML = goal1 ? "☑︎ Hell yeah!" : "☐ 
 document.getElementById("goal2").innerHTML = goal2 ? "☑︎ Aaaaw yeah!!" : "☐ Come on bruh...";
 document.getElementById("goal3").innerHTML = goal3 ? "☑︎ Let's goooo!" : "☐ Are you trying?";
 document.getElementById("goal4").innerHTML = goal4 ? "☑︎ You're a star!" : "☐ Keep trying!";
+document.getElementById("goal5").innerHTML = goal5 ? "☑︎ That's awesome!" : "☐ You should do it!";
 
 window.addEventListener("click", function(e) 
 {
