@@ -29,6 +29,8 @@ document.getElementById("goal2").innerHTML = goal2 ? "☑︎ Aaaaw yeah!!" : "�
 document.getElementById("goal3").innerHTML = goal3 ? "☑︎ Let's goooo!" : "☐ Are you trying?";
 document.getElementById("goal4").innerHTML = goal4 ? "☑︎ You're a star!" : "☐ Keep trying!";
 document.getElementById("goal5").innerHTML = goal5 ? "☑︎ That's awesome!" : "☐ You should do it!";
+document.getElementById("goal6").innerHTML = goal6 ? "☑︎ Epic stuff!" : "☐ Don't give up!";
+
 
 spawnStars(10, 300);
 
