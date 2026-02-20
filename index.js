@@ -10,12 +10,14 @@ let goal2 = false;
 let goal3 = false;
 let goal4 = false;
 let goal5 = true;
+let goal6 = false;
 
 goalCount(goal1);
 goalCount(goal2);
 goalCount(goal3);
 goalCount(goal4);
 goalCount(goal5);
+goalCount(goal6);
 
 function goalCount(goal) {
     goalCountNum++;
