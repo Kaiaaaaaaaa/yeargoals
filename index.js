@@ -8,7 +8,7 @@ let starSpawnSpeed = 20;
 let goal1 = false;
 let goal2 = false;
 let goal3 = false;
-let goal4 = false;
+let goal4 = true;
 let goal5 = true;
 let goal6 = false;
 
