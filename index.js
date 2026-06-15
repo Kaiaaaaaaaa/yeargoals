@@ -11,6 +11,7 @@ let goal3 = false;
 let goal4 = true;
 let goal5 = true;
 let goal6 = false;
+let goal7 = false;
 
 goalCount(goal1);
 goalCount(goal2);
@@ -18,6 +19,7 @@ goalCount(goal3);
 goalCount(goal4);
 goalCount(goal5);
 goalCount(goal6);
+goalCount(goal7);
 
 function goalCount(goal) {
     goalCountNum++;
@@ -32,7 +34,7 @@ document.getElementById("goal3").innerHTML = goal3 ? "☑︎ Let's goooo!" : "�
 document.getElementById("goal4").innerHTML = goal4 ? "☑︎ You're a star!" : "☐ Keep trying!";
 document.getElementById("goal5").innerHTML = goal5 ? "☑︎ That's awesome!" : "☐ You should do it!";
 document.getElementById("goal6").innerHTML = goal6 ? "☑︎ Epic stuff!" : "☐ Don't give up!";
-
+document.getElementById("goal7").innerHTML = goal7 ? "☑︎ Sweeeeeet!" : "☐ Pick up the slack!";
 
 spawnStars(10, 300);
 
